@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="estilos.css" rel="stylesheet">
+	<title>Salud.uy</title>
+</head>
+<body>
+
+	<header class="d-flex align-items-center p-3 border-bottom">
+		<h1 class="h3 mb-0 text-primary"><a href="index.html" style="text-decoration: none;">Salud.uy</a></h1>
+		<search class="mx-auto">
+			<form class="d-flex">
+				<label for="caja-busqueda" class="visually-hidden">Buscar en el sitio:</label>
+				<input type="search" id="caja-busqueda" class="form-control" name="q" placeholder="Consulta... Dias consulta..." required>
+				<button type="submit" class="btn btn-primary ms-2">Buscar</button>
+			</form>
+		</search>
+			<div class="d-flex align-items-center">
+				<a href="login.html">Iniciar sesión</a> / <a href="AltaUsuario.html">Registrarse</a>
+			</div>
+	</header>
+
+	<div class="container mt-4">
+		<div class="row" style="column-gap: 40px;">
+
+			<!-- SECCION INZQUIERDA -->
+			<nav class="col-auto ps-4 pe-3 border-end" style="width: 240px;">
+				<h2 class="h5">ESPECIALIDADES</h2>
+				<ul class="list-unstyled">
+					<li class="mb-1"><a href="#" class="text-dark">Cardiología</a></li>
+					<li class="mb-1"><a href="#" class="text-dark">Pediatría</a></li>
+					<li class="mb-1"><a href="#" class="text-dark">Traumatología</a></li>
+					<li class="mb-1"><a href="#" class="text-dark">Radiología</a></li>
+				</ul>
+				<a href="html_rep_usuarios.html" class="btn btn-light border border-dark fw-bold w-100 mt-3">Usuarios</a>
+			</nav>
+
+			<div class="col">
+				<h4>Días de consulta</h4>
+
+				<div class="dia">
+					<img src="img/cardiologia.png" alt="Cardiología">
+					<div>
+						<a href="html_rep_c_de_dc_visitante.html"><b>Cardiología - Lunes</b></a>
+						<p>Atención cardiológica semanal para los días lunes.</p>
+					</div>
+				</div>
+
+				<div class="dia">
+					<img src="img/pediatria.png" alt="Pediatría">
+					<div>
+						<a href="html_rep_c_de_dc_visitante.html"><b>Pediatría - Martes</b></a>
+						<p>Atención pediátrica semanal para los días martes.</p>
+					</div>
+				</div>
+
+				<div class="dia">
+					<img src="img/traumatologia.png" alt="Traumatología">
+					<div>
+						<a href="html_rep_c_de_dc_visitante.html"><b>Traumatología - Jueves</b></a>
+						<p>Atención de lesiones y fracturas para los días jueves.</p>
+					</div>
+				</div>
+
+				<div class="dia">
+					<img src="img/radiologia.png" alt="Radiología">
+					<div>
+						<a href="html_rep_c_de_dc_visitante.html"><b>Radiología - Viernes</b></a>
+						<p>Placas con Rayos X para ver quebraduras o fracturas.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

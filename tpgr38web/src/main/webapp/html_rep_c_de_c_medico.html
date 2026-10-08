@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Salud.uy</title>
+</head>
+<body>
+
+	<header class="d-flex align-items-center p-3 border-bottom">
+		<h1 class="h3 mb-0 text-primary"><a href="indexMedico.html" style="text-decoration: none;">Salud.uy</a></h1>
+		<search class="mx-auto">
+			<form class="d-flex">
+				<label for="caja-busqueda" class="visually-hidden">Buscar en el sitio:</label>
+				<input type="search" id="caja-busqueda" class="form-control" name="q" placeholder="Consulta... Dias consulta..." required>
+				<button type="submit" class="btn btn-primary ms-2">Buscar</button>
+			</form>
+		</search>
+			<div class="d-flex align-items-center">
+				<a href="index.html" class="me-3">Cerrar sesión</a>
+				<div class="d-flex flex-column text-end lh-sm">
+					<a href="html_rep_perfil_medico.html" style="text-decoration: none;">el cura-todo</a>
+					<small class="text-secondary">(médico)</small>
+				</div>
+			</div>
+	</header>
+
+<main class="container-fluid py-5">
+
+	<div class="row align-items-start justify-content-between" style="column-gap: 40px;">
+
+		<!-- SECCION INZQUIERDA -->
+		<nav class="col-auto ps-4 pe-3 border-end" style="width: 240px;">
+			<h2 class="h5">ACCESO RÁPIDO</h2>
+			<ul class="list-unstyled mb-4">
+				<li class="mb-1"><a href="html_rep_perfil_medico.html" class="text-dark">Mi Perfil</a></li>
+				<li class="mb-1"><a href="#" class="text-dark">Alta Día de Consulta</a></li>
+				<li class="mb-1"><a href="#" class="text-dark">Alta Consulta</a></li>
+			</ul>
+			<h2 class="h5">ESPECIALIDADES</h2>
+			<ul class="list-unstyled">
+				<li class="mb-1"><a href="#" class="text-dark">Cardiología</a></li>
+				<li class="mb-1"><a href="#" class="text-dark">Pediatría</a></li>
+				<li class="mb-1"><a href="#" class="text-dark">Traumatología</a></li>
+				<li class="mb-1"><a href="#" class="text-dark">Radiología</a></li>
+			</ul>
+			<a href="html_rep_usuarios.html" class="btn btn-light border border-dark fw-bold w-100 mt-3">Usuarios</a>
+		</nav>
+
+		<!-- MEDIO -->
+		<div class="col-auto">
+			<div class="d-flex gap-4">
+				<img src="img/consultaradiologia.png" alt="Consulta de Radiología" width="230" height="230" class="rounded object-fit-cover">
+				<div>
+					<h2 class="h3 fw-bold mb-4">Consulta Radiología - Viernes 3 de Octubre</h2>
+					<p class="mb-1"><strong>Fecha:</strong> 03/10/2026</p>
+					<p class="mb-1"><strong>Nro. Sala:</strong> 12</p>
+					<p class="mb-1"><strong>Cant. Nros:</strong> 8</p>
+					<p class="mb-1"><strong>Costo:</strong> $1150</p>
+
+					<h3 class="h5 mt-4">Reservas</h3>
+					<table class="table table-sm">
+						<thead>
+							<tr>
+								<th>Número</th>
+								<th>Paciente</th>
+								<th>Fecha de reserva</th>
+								<th>Costo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><a href="#" class="text-dark">alfredo777</a></td>
+								<td>28/09/2026</td>
+								<td>$920</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><a href="#" class="text-dark">maicol.</a></td>
+								<td>30/09/2026</td>
+								<td>$1150</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><a href="#" class="text-dark">juan guijoazalo</a></td>
+								<td>01/10/2026</td>
+								<td>$1150</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<aside class="col-auto text-center border-start ps-2 me-1" style="width: 250px;">
+			<h2 class="h5 fw-bold mb-2">Día de Consulta</h2>
+			<a href="html_rep_c_de_dc_medico.html" class="text-dark text-decoration-none d-flex flex-column align-items-center mb-4">
+				<img src="img/radiologia.png" alt="Día de consulta Radiología - Viernes" width="150" height="150" class="rounded object-fit-cover mb-1">
+				<strong>Radiología - Viernes</strong>
+			</a>
+
+			<h2 class="h5 fw-bold mb-2">Médico</h2>
+			<a href="html_rep_perfil_medico.html" class="text-dark text-decoration-none d-flex flex-column align-items-center">
+				<img src="img/medicoperfil.png" alt="Foto del médico el cura-todo" width="150" height="150" class="rounded object-fit-cover mb-1">
+				<strong>el cura-todo</strong>
+			</a>
+		</aside>
+
+	</div>
+</main>
+
+</body>
+</html>

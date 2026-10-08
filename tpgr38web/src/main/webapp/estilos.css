@@ -1,0 +1,18 @@
+.dia {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+
+.dia img {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+
+.caja {
+	border: 1px solid gray;
+	padding: 10px;
+	margin-bottom: 15px;
+}

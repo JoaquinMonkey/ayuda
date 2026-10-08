@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Datos del usuario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+	<header class="d-flex align-items-center p-3 border-bottom">
+		<h1 class="h3 mb-0 text-primary"><a href="indexPaciente.html" style="text-decoration: none;">Salud.uy</a></h1>
+		<search class="mx-auto">
+			<form class="d-flex">
+				<label for="caja-busqueda" class="visually-hidden">Buscar en el sitio:</label>
+				<input type="search" id="caja-busqueda" class="form-control" name="q" placeholder="Consulta... Dias consulta..." required>
+				<button type="submit" class="btn btn-primary ms-2">Buscar</button>
+			</form>
+		</search>
+			<div class="d-flex align-items-center">
+				<a href="index.html" class="me-3">Cerrar sesión</a>
+				<div class="d-flex flex-column text-end lh-sm">
+					<a href="html_rep_perfil_paciente.html" style="text-decoration: none;">juan guijoazalo</a>
+					<small class="text-secondary">(paciente)</small>
+				</div>
+			</div>
+	</header>
+
+    <main class="container-fluid mt-3">
+        <div class="row">
+
+            <!-- SECCION INZQUIERDA -->
+            <nav class="col-auto ps-4 pe-3 border-end" style="width: 240px;">
+                <h2 class="h5">ACCESO RÁPIDO</h2>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-1"><a href="html_rep_perfil_paciente.html" class="text-dark">Mi Perfil</a></li>
+                    <li class="mb-1"><a href="#" class="text-dark">Reserva de Consulta</a></li>
+                </ul>
+                <h2 class="h5">ESPECIALIDADES</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-1"><a href="#" class="text-dark">Cardiología</a></li>
+                    <li class="mb-1"><a href="#" class="text-dark">Traumatología</a></li>
+                    <li class="mb-1"><a href="#" class="text-dark">Pediatría</a></li>
+                    <li class="mb-1"><a href="#" class="text-dark">Radiología</a></li>
+                    <li class="mb-1"><a href="#" class="text-dark">Medicina General</a></li>
+                </ul>
+                <ul class="list-unstyled">
+                <a href="html_rep_usuarios.html" class="btn btn-light border border-dark fw-bold w-100 mt-3">Usuarios</a>
+                </ul>
+            </nav>
+
+            <!-- CENTRO -->
+            <section class="col">
+                <div class="card border-0 mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/pacienteperfil.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-title">juan guijoazalo</p>
+                                <button class="btn btn-link p-0 text-dark">📝</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion" id="datos-usuario-acordeon">
+                    <div class="d-flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#datos-usuario-collapse" aria-expanded="false"
+                                aria-controls="datos-usuario-collapse">
+                                Datos Usuario
+                            </button>
+                        </h2>
+
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#consultas-collapse" aria-expanded="false"
+                                aria-controls="consultas-collapse">
+                                Reservas
+                            </button>
+                        </h2>
+
+                    </div>
+
+
+                    <div id="datos-usuario-collapse" class="accordion-collapse collapse show"
+                        data-bs-parent="#datos-usuario-acordeon">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Nombre:</strong> Laura</li>
+                            <li class="list-group-item"><strong>Apellido:</strong> Gómez</li>
+                            <li class="list-group-item"><strong>Email:</strong> laura.gomez@gmail.com</li>
+                            <li class="list-group-item"><strong>Fecha de Nacimiento:</strong> 1990/4/12</li>
+                            <li class="list-group-item"><strong>Fecha de Ingreso:</strong> 2024/3/1</li>
+                            <li class="list-group-item"><strong>Documento:</strong> 45678901</li>
+                            <li class="list-group-item"><strong>Antecedentes:</strong> Sin antecedentes relevantes.</li>
+                        </ul>
+                    </div>
+
+
+                    <div id="consultas-collapse" class="accordion-collapse collapse"
+                        data-bs-parent="#datos-usuario-acordeon">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <a href="html_rep_c_de_c_paciente.html" class="card border-0 w-100">
+                                    <div class="row g-0 d-flex align-items-center text-center text-md-start">
+                                        <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                            <img src="img/consultaradiologia.png" class="img-fluid rounded" alt="..."
+                                                style="max-width: 120px;">
+                                        </div>
+                                        <div class="col-12 col-md">
+                                            <div class="card-body p-0 ps-md-3">
+                                                <p class="card-title m-0">Consulta Radiología - Viernes 3 de Octubre
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="estilos.css" rel="stylesheet">
+	<title>Salud.uy</title>
+</head>
+<body>
+
+	<header class="d-flex align-items-center p-3 border-bottom">
+		<h1 class="h3 mb-0 text-primary"><a href="index.html" style="text-decoration: none;">Salud.uy</a></h1>
+		<search class="mx-auto">
+			<form class="d-flex">
+				<label for="caja-busqueda" class="visually-hidden">Buscar en el sitio:</label>
+				<input type="search" id="caja-busqueda" class="form-control" name="q" placeholder="Consulta... Dias consulta..." required>
+				<button type="submit" class="btn btn-primary ms-2">Buscar</button>
+			</form>
+		</search>
+			<div class="d-flex align-items-center">
+				<a href="login.html">Iniciar sesión</a> / <a href="AltaUsuario.html">Registrarse</a>
+			</div>
+	</header>
+
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col-6">
+
+				<h2>Registrarse</h2>
+
+				<form action="index.html" onsubmit="return validar()">
+
+					<p>
+						Tipo de usuario:
+						<input type="radio" name="tipo" id="paciente" checked> Paciente
+						<input type="radio" name="tipo" id="medico"> Médico
+					</p>
+
+					<label>Nickname</label>
+					<input type="text" id="nickname" class="form-control mb-2" required>
+
+					<label>Nombre</label>
+					<input type="text" id="nombre" class="form-control mb-2" required>
+
+					<label>Apellido</label>
+					<input type="text" id="apellido" class="form-control mb-2" required>
+
+					<label>Correo electrónico</label>
+					<input type="email" id="correo" class="form-control mb-2" required>
+
+					<label>Contraseña</label>
+					<input type="password" id="contrasenia" class="form-control mb-2" required>
+
+					<label>Confirmar contraseña</label>
+					<input type="password" id="confirmacion" class="form-control mb-2" required>
+
+					<label>Imagen (opcional)</label>
+					<input type="file" id="imagen" class="form-control mb-2" accept="image/*">
+
+					<h4 class="mt-4">Si sos paciente</h4>
+
+					<label>Fecha de nacimiento</label>
+					<input type="date" id="fechaNac" class="form-control mb-2">
+
+					<label>Número de documento</label>
+					<input type="number" id="documento" class="form-control mb-2">
+
+					<label>Antecedentes médicos</label>
+					<textarea id="antecedentes" class="form-control mb-2"></textarea>
+
+					<h4 class="mt-4">Si sos médico</h4>
+
+					<label>Número de registro</label>
+					<input type="number" id="numRegistro" class="form-control mb-2" min="0">
+
+					<label>Mes de licencia</label>
+					<select id="mesLicencia" class="form-control mb-2">
+						<option>Enero</option>
+						<option>Febrero</option>
+						<option>Marzo</option>
+						<option>Abril</option>
+						<option>Mayo</option>
+						<option>Junio</option>
+						<option>Julio</option>
+						<option>Agosto</option>
+						<option>Setiembre</option>
+						<option>Octubre</option>
+						<option>Noviembre</option>
+						<option>Diciembre</option>
+					</select>
+
+					<label>Sitio web (opcional)</label>
+					<input type="url" id="sitioWeb" class="form-control mb-2">
+
+					<label>Porcentaje adicional</label>
+					<input type="number" id="porcentaje" class="form-control mb-2" min="0">
+
+					<p class="mb-0">Especialidades:</p>
+					<input type="checkbox" name="especialidades"> Cardiología<br>
+					<input type="checkbox" name="especialidades"> Pediatría<br>
+					<input type="checkbox" name="especialidades"> Traumatología<br>
+					<input type="checkbox" name="especialidades"> Radiología<br>
+
+					<button type="submit" class="btn btn-primary mt-3">Registrarse</button>
+					<a href="index.html" class="btn btn-secondary mt-3">Cancelar</a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function validar() {
+			var contraseña = document.getElementById("contrasenia").value;
+			var confirmacion = document.getElementById("confirmacion").value;
+
+			if (contraseña != confirmacion) {
+				alert("La contraseña y la confirmación no coinciden");
+				return false;
+			}
+
+			if (document.getElementById("medico").checked) {
+				if (document.getElementById("numRegistro").value == "" || document.getElementById("porcentaje").value == "") {
+					alert("Completá los datos de médico");
+					return false;
+				}
+				if (document.querySelectorAll("input[name='especialidades']:checked").length == 0) {
+					alert("Elegí al menos una especialidad");
+					return false;
+				}
+			} else {
+				if (document.getElementById("fechaNac").value == "" || document.getElementById("documento").value == "" || document.getElementById("antecedentes").value == "") {
+					alert("Completá los datos de paciente");
+					return false;
+				}
+			}
+
+			return true;
+		}
+	</script>
+
+</body>
+</html>
